@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>student portal </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script src="script.js"></script>
+    <style>
+        body{
+            font-family:arial,san-serif;
+        }
+
+        .container{
+            width:500px;
+            margin: 20px auto;
+            border: solid;
+        }
+        
+        .side{
+            width:500px;
+            margin: 0 auto;
+            border: solid;
+        }
+
+        .form-group{
+            margin-bottom:20px;
+        }
+
+        label{
+            display:block;
+            font-weight:bold;
+        }
+
+        input[type="text"],
+        input[type="password"]{ 
+              width:100%;
+              padding:8px;
+              font-size:16px;
+        }
+
+        input[type="submit"]{
+            background-color: lightgray;
+            color:black;
+            padding:10px 20px;
+            border:none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        
+        .message{
+            margin-top: 20px;
+            text-align: left;
+        }
+        
+        h3{
+            text-align: center;
+        }
+        
+        h2{  
+            font-family: 'Times New Roman', Times, serif;
+            text-align: center;
+            border: solid;
+            border-width: 5px;
+            padding:10px;
+        }
+        
+        .total{
+            border: solid;
+            border-width: 10px;
+            padding:20px;
+        }
+    </style>
+</head>
+<body> 
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#">Student Portal</a>
+          </div>
+        
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-password"></span> Forget Password?</a></li>
+          </ul>
+        </div>
+    </nav>
+    <h2>Guest Login</h2>
+    <div class="total">
+        <div class="container"><br>
+            <form id="login-form" method="POST" action="spvalidate.php">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password">
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Login" name="submit">
+                </div>
+            </form>
+        </div>
+        
+        <h3>Instructions</h3>
+        <div class="side">
+            <p class="message" id="message">
+                - Guest Login can be used only for Exam/Revaluation Registration and downloading Halltickets<br><br>
+                - Please Sign Up for accessing features like Edit Registration / View Result / View Internals / Manage Profile / Submit Grievances etc
+            </p>
+        </div>
+    </div>
+    
+</body>
+</html>
